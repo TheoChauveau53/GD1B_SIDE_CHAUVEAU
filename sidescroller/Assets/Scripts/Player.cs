@@ -50,17 +50,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && !canWallJumpRight)
         {
             transform.position += Vector3.left * speed;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D)&& !canWallJumpLeft)
         {
             transform.position += Vector3.right * speed;
         }
         if (Input.GetKey(KeyCode.W) && canJump == true)
         {
-            rB.AddForce(Vector2.up * jumpForce);
+            rB.velocity = new Vector2(rB.velocity.x, jumpForce);
         }
 
 
