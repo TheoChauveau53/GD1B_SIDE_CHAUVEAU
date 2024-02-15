@@ -155,12 +155,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64906db5136957941bf4e36624bf6427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.02
-  jumpForce: 20
-  wallJumpForce: 40
+  speed: 0.005
+  jumpForce: 5
+  wallJumpForce: 3
   canJump: 0
   canWallJumpLeft: 0
   canWallJumpRight: 0
+  canWalk: 1
+  lastWallJump: 
   rB: {fileID: 10193307}
 --- !u!61 &10193304
 BoxCollider2D:
@@ -628,6 +630,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -709,6 +712,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ffb5a2e419b40488a5eb1d2e4cec66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 10193306}
+  offset: {x: 0, y: 0, z: -10}
 --- !u!1 &672660889
 GameObject:
   m_ObjectHideFlags: 0
