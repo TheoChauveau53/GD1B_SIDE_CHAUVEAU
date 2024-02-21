@@ -18,7 +18,7 @@ public class Camera : MonoBehaviour
     {
         if (Player != null)
         {
-            // Met à jour la position de la caméra en fonction de la position du joueur avec l'offset
+            
             transform.position = Player.position + offset;
         }
     }
